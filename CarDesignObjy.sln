@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDesign.Exe", "CarDesign.Exe\CarDesign.Exe.csproj", "{D5384F98-6B1A-443D-8B58-D3059063C9E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDesign.Views", "CarDesign.Views\CarDesign.Views.csproj", "{73F0CBB6-53DD-42B9-8FA7-F32EA19FC881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDesign.ViewModels", "CarDesign.ViewModels\CarDesign.ViewModels.csproj", "{C76A3473-A26A-4E09-AA77-D022F034C13C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF5AA614-2A2F-4879-8EE5-E5D6EABB7984} = {AF5AA614-2A2F-4879-8EE5-E5D6EABB7984}
+		{F9120398-4171-45C1-AE60-8ED4F9272C02} = {F9120398-4171-45C1-AE60-8ED4F9272C02}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDesign.Model.Persistent", "CarDesign.Model.Persistent\CarDesign.Model.Persistent.csproj", "{AF5AA614-2A2F-4879-8EE5-E5D6EABB7984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDesign.Test", "CarDesign.Test\CarDesign.Test.csproj", "{36D15036-FA0C-463F-B80D-E3C4F7997A4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDesign.Model", "CarDesign.Model\CarDesign.Model.csproj", "{F9120398-4171-45C1-AE60-8ED4F9272C02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5384F98-6B1A-443D-8B58-D3059063C9E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5384F98-6B1A-443D-8B58-D3059063C9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5384F98-6B1A-443D-8B58-D3059063C9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5384F98-6B1A-443D-8B58-D3059063C9E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F0CBB6-53DD-42B9-8FA7-F32EA19FC881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F0CBB6-53DD-42B9-8FA7-F32EA19FC881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F0CBB6-53DD-42B9-8FA7-F32EA19FC881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F0CBB6-53DD-42B9-8FA7-F32EA19FC881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C76A3473-A26A-4E09-AA77-D022F034C13C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76A3473-A26A-4E09-AA77-D022F034C13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76A3473-A26A-4E09-AA77-D022F034C13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76A3473-A26A-4E09-AA77-D022F034C13C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF5AA614-2A2F-4879-8EE5-E5D6EABB7984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5AA614-2A2F-4879-8EE5-E5D6EABB7984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5AA614-2A2F-4879-8EE5-E5D6EABB7984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5AA614-2A2F-4879-8EE5-E5D6EABB7984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D15036-FA0C-463F-B80D-E3C4F7997A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D15036-FA0C-463F-B80D-E3C4F7997A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D15036-FA0C-463F-B80D-E3C4F7997A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D15036-FA0C-463F-B80D-E3C4F7997A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9120398-4171-45C1-AE60-8ED4F9272C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9120398-4171-45C1-AE60-8ED4F9272C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9120398-4171-45C1-AE60-8ED4F9272C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9120398-4171-45C1-AE60-8ED4F9272C02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

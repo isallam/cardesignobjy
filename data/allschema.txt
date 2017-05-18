@@ -1,0 +1,49 @@
+UPDATE SCHEMA
+{
+  CREATE CLASS CarDesign.Model.Rotor
+  {
+    Id:            Integer {Encoding: Unsigned}
+  }
+
+  CREATE CLASS CarDesign.Model.Stator
+  {
+    Id:            Integer {Encoding: Unsigned}
+  }
+
+  CREATE CLASS CarDesign.Model.CylinderHead
+  {
+    Id:            Integer {Encoding: Unsigned}
+  }
+
+  CREATE CLASS CarDesign.Model.Wheel
+  {
+    Id:            Integer {Encoding: Unsigned}, 
+    TirePressure:  Float {Encoding: IEEE, Storage:B64},
+    Location:      Integer {Encoding: Unsigned},
+    Rotor:         Reference {Referenced: CarDesign.Model.Rotor}, 
+    Stator:        Reference {Referenced: CarDesign.Model.Stator}
+  }
+
+  CREATE CLASS CarDesign.Model.Engine
+  {
+    Description:   String,
+    HorsePower:    Float {Encoding: IEEE, Storage:B64},
+    Cylinders:     List {Element: Reference{Referenced: CarDesign.Model.Cylinder}}
+  }
+
+  CREATE CLASS CarDesign.Model.Cylinder
+  {
+    Id:            Integer {Encoding: Unsigned},
+    Head:          Reference {Referenced: CarDesign.Model.CylinderHead}
+  }
+
+  CREATE CLASS CarDesign.Model.Car
+  {
+    Id:            Integer {Encoding: Unsigned},
+    Manufacturer:  String,
+    Model:         String,
+    Year:          Integer {Encoding: Unsigned},
+    Engine:        Reference{Referenced: CarDesign.Model.Engine},
+    Wheels:        List {Element: Reference{Referenced: CarDesign.Model.Wheel} } 
+  }
+};

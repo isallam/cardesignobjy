@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="CarDesign.Views.CarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+            d:DesignHeight="450" d:DesignWidth="700">
+
+    <ScrollViewer>
+        <ItemsControl ItemsSource="{Binding Cars}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="5" Background="Black"  Foreground="Orange">
+            <ItemsControl.Resources>
+                <Style x:Key="{x:Type Label}" TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="Foreground" Value="Orange"/>
+                </Style>
+            </ItemsControl.Resources>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <GroupBox BorderBrush="AliceBlue" BorderThickness="1" Header="Car">
+                        <StackPanel Margin="2">
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <Label VerticalAlignment="Center" Content="Id:"></Label>
+                                <TextBlock VerticalAlignment="Center" Text="{Binding Id}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <Label  VerticalAlignment="Center" Content="Year:"></Label>
+                                <TextBlock  VerticalAlignment="Center"  Text="{Binding Year}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <Label  VerticalAlignment="Center" Content="Make:"></Label>
+                                <TextBlock  VerticalAlignment="Center" Text="{Binding Manufacturer}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <Label  VerticalAlignment="Center" Content="Model:"></Label>
+                                <TextBlock  VerticalAlignment="Center"  Text="{Binding Model}"/>
+                            </StackPanel>
+                            <GroupBox BorderBrush="White" BorderThickness="1" Header="Engine" Margin="2">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <Label VerticalAlignment="Center" Content="Description:" ></Label>
+                                        <TextBlock VerticalAlignment="Center"  Text="{Binding Engine.Description}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <Label  VerticalAlignment="Center" Content="Horse Power:"></Label>
+                                        <TextBlock  VerticalAlignment="Center"  Text="{Binding Engine.HorsePower}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="2">
+                                        <Label  VerticalAlignment="Center" Content="Number Of Cylinders:"></Label>
+                                        <TextBlock  VerticalAlignment="Center"  Text="{Binding Engine.Cylinders.Count}"/>
+                                    </StackPanel>
+                                </StackPanel>
+
+                            </GroupBox>
+
+                            <GroupBox BorderBrush="White" BorderThickness="1" Header="Wheels">
+                                <ItemsControl ItemsSource="{Binding Wheels}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="5">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Margin="2">
+                                                <StackPanel Orientation="Horizontal" Margin="2">
+                                                    <Label VerticalAlignment="Center" Content="Id:"></Label>
+                                                    <TextBlock VerticalAlignment="Center"  Text="{Binding Id}"/>
+                                                    
+                                                    <TextBlock Text="        "></TextBlock>
+
+                                                    <Label VerticalAlignment="Center" Content="Tire Pressure:"></Label>
+                                                    <TextBlock VerticalAlignment="Center"  Text="{Binding TirePressure}"/>
+
+                                                    <TextBlock Text="        "></TextBlock>
+                                                    
+                                                    <Label VerticalAlignment="Center" Content="Location:"></Label>
+                                                    <TextBlock VerticalAlignment="Center"  Text="{Binding Location}"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </GroupBox>
+
+                        </StackPanel>
+                    </GroupBox>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ScrollViewer>
+
+</UserControl>
