@@ -18,6 +18,6 @@ The idea is that you will notice similarity between how to access the in-memory 
 # Setup
 1. Run recreatefd.sh in the data directory to cosntruct the empty FD, create the schema and generate the persistent accessor code.
 2. Run CarDesign.Test code.
-  1. It will initially create two car objects with all their componentsr, then dump the contents.
-  2. In subsequent calls it will just load the objects from the persitent store.
+    * It will initially create two car objects with all their componentsr, then dump the contents.
+    * In subsequent calls it will just load the objects from the persitent store.
 
