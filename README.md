@@ -1,11 +1,14 @@
 # cardesignobjy
-example model using objy c# APIs
+Example model using objy c# APIs
 
-The project show the difference between in-memory C# classes and persistent Objectivity classes. See CarDesign.Model for the in-memory version and data/allschema.txt for the persistent version. 
+The project demonstrates the difference between in-memory C# classes and persistent Objectivity classes. See CarDesign.Model for the in-memory version and data/allschema.txt for the persistent version. 
 
-The CarDesign.Model.Persistent is the generated code that access the persistent version.
+The CarDesign.Model.Persistent contains the generated accessor code that access the persistent version.
 
-The project use a GUI driven access to the in-memory classes. We didn't convert such access to the persistent version, but we did provide a similar code that construct and read objects from the persistent store in CarDesign.Test project
+The project use a GUI driven access to show the in-memory classes/objects. We didn't convert such access to the persistent version, although we did provide a similar code that construct and read objects from the persistent store in CarDesign.Test project
+
+The idea is that you will notice similarity between how to access the in-memory C# objects and the Pesistent objects using the C# proxies
+
 
 # Notes
 1. All access to persistent data need to be done within transactions.
